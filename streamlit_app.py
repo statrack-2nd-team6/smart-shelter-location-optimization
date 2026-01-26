@@ -12,6 +12,9 @@ import folium
 from streamlit_folium import folium_static
 import plotly.express as px
 import plotly.graph_objects as go
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
 
 # Page config
 st.set_page_config(
@@ -23,26 +26,29 @@ st.set_page_config(
 # Load models and data
 @st.cache_resource
 def load_models():
-    with open('best_model.pkl', 'rb') as f:
+    with open(BASE_DIR / "best_model.pkl", "rb") as f:
         model = pickle.load(f)
-    with open('scaler.pkl', 'rb') as f:
+    with open(BASE_DIR / "scaler.pkl", "rb") as f:
         scaler = pickle.load(f)
-    with open('model_metadata.json', 'r') as f:
+    with open(BASE_DIR / "model_metadata.json", "r", encoding="utf-8") as f:
         metadata = json.load(f)
     return model, scaler, metadata
 
+
 @st.cache_data
 def load_seoul_data():
-    with open('seoul_data.json', 'r') as f:
+    with open(BASE_DIR / "seoul_data.json", "r", encoding="utf-8") as f:
         data = json.load(f)
     return pd.DataFrame(data)
 
 try:
     model, scaler, metadata = load_models()
     seoul_df = load_seoul_data()
-    feature_cols = metadata['feature_cols']
-except:
-    st.error("모델 파일을 찾을 수 없습니다. train_ml_models.py를 먼저 실행해주세요.")
+    feature_cols = metadata["feature_cols"]
+except FileNotFoundError as e:
+    st.error(f"❌ 파일을 찾을 수 없습니다: {e}")
+    st.write("BASE_DIR:", BASE_DIR)
+    st.write("BASE_DIR 파일 목록:", [p.name for p in BASE_DIR.iterdir()])
     st.stop()
 
 # Title
