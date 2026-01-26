@@ -37,3 +37,7 @@ seaborn>=0.13.0
 # Dev
 jupyter>=1.0.0
 ipykernel>=6.29.0
+
+# Deploy
+folium>=0.15.1,<0.17.0
+streamlit-folium>=0.20.0,<0.22.0
