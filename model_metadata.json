@@ -1,0 +1,62 @@
+{
+  "feature_cols": [
+    "cai",
+    "pm25",
+    "pm10",
+    "o3",
+    "no2",
+    "ridership",
+    "ridership_log",
+    "dispatch_interval",
+    "dispatch_half",
+    "lat",
+    "lon",
+    "cai_ridership",
+    "pollution_exposure_v2",
+    "total_exposure",
+    "is_high_traffic",
+    "is_high_pollution",
+    "is_long_wait"
+  ],
+  "best_model_name": "Linear Regression",
+  "results": {
+    "Linear Regression": {
+      "train_rmse": 9.911091951517143e-17,
+      "train_mae": 7.645193005195646e-17,
+      "train_r2": 1.0,
+      "test_rmse": 1.0071673799346113e-16,
+      "test_mae": 7.770652855268525e-17,
+      "test_r2": 1.0
+    },
+    "Ridge Regression": {
+      "train_rmse": 0.00011124206745634162,
+      "train_mae": 6.309145951115472e-05,
+      "train_r2": 0.9999973799956566,
+      "test_rmse": 0.00011063111927344036,
+      "test_mae": 6.220382536662472e-05,
+      "test_r2": 0.9999973638681439
+    },
+    "Random Forest": {
+      "train_rmse": 0.0019614134153125955,
+      "train_mae": 0.000846014362656293,
+      "train_r2": 0.9991854791785102,
+      "test_rmse": 0.004264628430222043,
+      "test_mae": 0.0018129452490333229,
+      "test_r2": 0.9960828075164622
+    },
+    "Gradient Boosting": {
+      "train_rmse": 0.001838838616640128,
+      "train_mae": 0.0014019009542641668,
+      "train_r2": 0.9992841020166388,
+      "test_rmse": 0.003859188662337215,
+      "test_mae": 0.0019402090595181253,
+      "test_r2": 0.9967922202804045
+    }
+  },
+  "data_info": {
+    "total_samples": 10694,
+    "train_samples": 8555,
+    "test_samples": 2139,
+    "n_features": 17
+  }
+}
