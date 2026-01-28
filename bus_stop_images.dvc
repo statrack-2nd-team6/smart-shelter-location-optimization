@@ -1,0 +1,6 @@
+outs:
+- md5: ec3d223208914bacb00225346513760e.dir
+  size: 1349134325
+  nfiles: 10696
+  hash: md5
+  path: bus_stop_images

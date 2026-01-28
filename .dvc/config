@@ -1,0 +1,5 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = gdrive://1_mVpz4ngt3H8GrGzbCgp3WI-A6J8AzF7
+    gdrive_service_account_json_file_path = /home/rumeri46/workspace/CafTam/key.json
