@@ -11,7 +11,7 @@
 
 ML/DL/CNN 통합 분석으로 대기오염 노출 최소화 및 시민 건강 보호
 
-[📊 주요 결과](#-주요-결과) · [🚀 빠른 시작](#-빠른-시작) · [📖 전체 문서](#-프로젝트-구조)
+[📊 주요 결과](#-주요-결과) · [📖 전체 문서](#-프로젝트-구조)
 
 </div>
 
@@ -462,43 +462,3 @@ Top 100: 300억원
 - **이유**: CNN이 설치 최적 위치로 판단
 
 **결론**: ML만으로는 부족, CNN 공간분석 필수!
-
----
-
-## 📊 시각화
-
-### Figure 4: 자치구별 분석
-![District Analysis](results/fig4_district_analysis.png)
-
-**포함 차트**:
-1. 평균 대기오염 노출지수 (상위 20% 강조)
-2. 정류장 수
-3. 우선순위 분포 (4단계 stacked bar)
-4. 평균 승객 수
-
-### Figure 7: 공간 히트맵
-![Heatmap](results/fig7_heatmap_analysis.png)
-
-**포함 차트**:
-1. 대기오염 노출지수 히트맵 (Hexbin)
-2. 정류장 밀도 히트맵
-
-### 모델 성능 비교
-![Model Comparison](results/model_comparison.png)
-
-**포함 차트**:
-1. R² (Train) 비교
-2. R² (Test) 비교
-3. RMSE 비교
-4. Train vs Test 비교
-
-### SHAP 분석
-![SHAP](results/shap_importance.png)
-
-**포함 차트**:
-1. Feature Importance 막대 그래프
-2. Summary Plot (점별 영향도)
-3. Dependence Plot (특성 간 관계)
-
----
-
